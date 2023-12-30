@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "784df65c002668a2535aefb23f548284c09955893fe387b17502d7c890061142"
+            "sha256": "71285133466cde28210b99aa0ee494f53d0ff51c03bd5c813f6db3e4fc0214bd"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -58,6 +58,15 @@
             "markers": "python_version >= '3.6'",
             "version": "==3.14.0"
         },
+        "drf-nested-routers": {
+            "hashes": [
+                "sha256:1407565abc7bada37c162c7e11bf214ae71625a17fdec6d9a47a17f4a3627d32",
+                "sha256:9a6813554020134a02e62f8c2934b2047717f7da06f8b801752c521e43735c63"
+            ],
+            "index": "pypi",
+            "markers": "python_version >= '3.8'",
+            "version": "==0.93.5"
+        },
         "mysqlclient": {
             "hashes": [
                 "sha256:1f8889cc5f0141bb307b915e981a66793df663ace92259344661084a7dd8d12a",
@@ -99,11 +108,11 @@
         },
         "tzdata": {
             "hashes": [
-                "sha256:11ef1e08e54acb0d4f95bdb1be05da659673de4acbd21bf9c69e94cc5e907a3a",
-                "sha256:7e65763eef3120314099b6939b5546db7adce1e7d6f2e179e3df563c70511eda"
+                "sha256:aa3ace4329eeacda5b7beb7ea08ece826c28d761cda36e747cfbf97996d39bf3",
+                "sha256:dd54c94f294765522c77399649b4fefd95522479a664a0cec87f41bebc6148c9"
             ],
             "markers": "sys_platform == 'win32'",
-            "version": "==2023.3"
+            "version": "==2023.4"
         }
     },
     "develop": {}

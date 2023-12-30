@@ -10,7 +10,11 @@ class Promotion(models.Model):
 class Collection(models.Model):
     title = models.CharField(max_length=255)
     featured_product = models.ForeignKey(
-        "Product", on_delete=models.SET_NULL, null=True, related_name="+", blank=True
+        "Product",
+        on_delete=models.SET_NULL,
+        null=True,
+        related_name="products",
+        blank=True,
     )
 
     def __str__(self) -> str:
@@ -105,3 +109,15 @@ class CartItem(models.Model):
     cart = models.ForeignKey(Cart, on_delete=models.CASCADE)
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
     quantity = models.PositiveSmallIntegerField()
+
+
+class Review(models.Model):
+    product = models.ForeignKey(
+        "Product", on_delete=models.CASCADE, related_name="reviews"
+    )
+    name = models.CharField(max_length=255)
+    description = models.TextField()
+    date = models.DateField(auto_now_add=True)
+
+    def __str__(self) -> str:
+        return self.name
