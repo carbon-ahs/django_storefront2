@@ -4,8 +4,16 @@ from . import views
 
 # URLConf
 router = routers.DefaultRouter()
-router.register("products", views.ProductViewSet)
-router.register("collections", views.CollectionViewSet)
+router.register(
+    "products",
+    views.ProductViewSet,
+    basename="products",
+)
+router.register(
+    "collections",
+    views.CollectionViewSet,
+    basename="collections",
+)
 
 products_router = routers.NestedDefaultRouter(
     router,
@@ -17,6 +25,8 @@ products_router.register(
     views.ReviewViewSet,
     basename="product-reviews",
 )
+
+# collection_router =
 
 urlpatterns = [
     path(r"", include(router.urls)),
